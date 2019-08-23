@@ -1,7 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView ,ImageBackground,TextInput,Button,Alert} from 'react-native';
 import CardFeed  from './CardFeed/cardfeed';
 import Profile from './Profile/profile';
+import { createAppContainer,createStackNavigator} from 'react-navigation';
+
+
+import LoginScreen from './Login/login';
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -10,6 +16,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
 class App extends React.Component {
   render()
@@ -17,9 +24,7 @@ class App extends React.Component {
   return (
     <ScrollView>
       <View style={styles.container}>
-    <Text>Open up App.js to start working on your app!</Text>
-    <Profile />
-    {/* <CardFeed 
+    <CardFeed 
       name='Ana Srivas' 
       category='Diet' 
       caption='Who said salads are not appetising??'
@@ -46,4 +51,16 @@ class App extends React.Component {
 }
 
 
-export default App;
+const MainNavigator = createStackNavigator(
+  {
+    Home: { screen: App },
+    Feed: { screen: CardFeed },
+    Login:{screen:LoginScreen}
+  },
+  {
+    initialRouteName: 'Login'
+  }
+);
+
+
+export default  createAppContainer(MainNavigator);

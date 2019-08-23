@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import CardFeed  from './CardFeed/cardfeed';
+import Profile from './Profile/profile';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +18,8 @@ class App extends React.Component {
     <ScrollView>
       <View style={styles.container}>
     <Text>Open up App.js to start working on your app!</Text>
-    <CardFeed 
+    <Profile />
+    {/* <CardFeed 
       name='Ana Srivas' 
       category='Diet' 
       caption='Who said salads are not appetising??'
@@ -36,7 +38,7 @@ class App extends React.Component {
       name='Arnav Anand' 
       category='Exercice' 
       caption="Don't let the smile fool you! Took 30 minutes to click the right pic!"
-      src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>  
+      src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>   */}
   </View>
     </ScrollView>
   );

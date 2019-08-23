@@ -55,4 +55,8 @@ const styles = StyleSheet.create({
         fontWeight:'700'
     }
 
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 4bdfd6ae3ff86871f5f567e2ee1ae55bafeff45a

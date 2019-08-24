@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#ffefd5',
     //   alignItems: 'center',
       justifyContent: 'center',
-      marginVertical:30,
+      marginVertical:10,
     },
     title:{
         borderBottomColor:'#d3d3d3',
@@ -48,7 +48,9 @@ class CardFeed extends React.Component {
         if(this.props.category==="Diet")
         {
             Alert.alert(
-                this.props.cal
+                'This item has',
+                 this.props.cal
+
               );
         }
     }

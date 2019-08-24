@@ -43,9 +43,9 @@ class App extends React.Component {
       cal='295 calories'
       />  
     <CardFeed 
-      name='Arnav Anand' 
+      name='Piyush Khurana' 
       category='Exercice' 
-      caption="Clap along if you are happy!"
+      caption="Lift along if you are happy!"
       src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>   
   </View>
     </ScrollView>
@@ -63,8 +63,8 @@ class App extends React.Component {
 //   }
 // }
 const TabNavigator = createBottomTabNavigator({
+  Profile:Profile,
   Feed:App,
-  Profile:Profile
 })
 const MainNavigator = createStackNavigator(
   {

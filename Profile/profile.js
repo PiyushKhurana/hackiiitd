@@ -60,8 +60,9 @@ class Profile extends React.Component {
     }
     onPress=()=>{
     this.setState({ ai: true });
-     setTimeout(() => this.setState({ ai: false }), 2000);
-     this.setState({Diet:'Ketogenic!'});
+     setTimeout(() => {this.setState({ ai: false });
+     this.setState({Diet:'Ketogenic!'});}, 2000);
+     
     }
     render()
     {
@@ -104,7 +105,7 @@ class Profile extends React.Component {
         onPress={this.onPress}
         disabled={this.state.ai} />
       <ActivityIndicator size="small" color="#00ff00" animating={this.state.ai}/>
-      <Text>{this.state.Diet}</Text>
+      <Text style={{textAlign:'center',fontWeight:'300' ,fontSize:15}}>{this.state.Diet}</Text>
     </View>
     </View>
   );

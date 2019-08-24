@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView ,ImageBackground,TextInput,Button,Alert} from 'react-native';
 import CardFeed  from './CardFeed/cardfeed';
 import Profile from './Profile/profile';
-import { createAppContainer,createStackNavigator} from 'react-navigation';
+import { createAppContainer,createStackNavigator,createBottomTabNavigator} from 'react-navigation';
 
 import LoginScreen from './Login/login';
 
@@ -55,10 +55,13 @@ class App extends React.Component {
 //     );
 //   }
 // }
-
+const TabNavigator = createBottomTabNavigator({
+  Home:App,
+  Profile:Profile
+})
 const MainNavigator = createStackNavigator(
   {
-    Home: { screen: App },
+    Home:  TabNavigator,
     // Feed: { screen: FeedScreen },
     Login:{screen:LoginScreen}
   },

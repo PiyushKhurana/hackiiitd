@@ -47,6 +47,7 @@ class App extends React.Component {
   }
 }
 
+
 // class Login extends React.Component{
 //   render()
 //   {
@@ -56,7 +57,7 @@ class App extends React.Component {
 //   }
 // }
 const TabNavigator = createBottomTabNavigator({
-  Home:App,
+  Feed:App,
   Profile:Profile
 })
 const MainNavigator = createStackNavigator(
@@ -69,6 +70,11 @@ const MainNavigator = createStackNavigator(
     initialRouteName: 'Login'
   }
 );
-
+TabNavigator.navigationOptions={
+  title:'Home'
+}
+LoginScreen.navigationOptions={
+  title:'Login'
+}
 
 export default  createAppContainer(MainNavigator);

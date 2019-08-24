@@ -1,6 +1,6 @@
 
 import React ,{Component} from 'react';
-import {StyleSheet ,TextInput,Text,Alert,ImageBackground,Button} from 'react-native';
+import {StyleSheet ,TextInput,Text,Alert,ImageBackground,Animated,Button} from 'react-native';
 
 
 const styles = StyleSheet.create({
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
 })
 
 export default class LoginScreen extends React.Component {
+  animatedValue=new Animated.Value(100)
     constructor(props) {
       super(props);
       this.state = {
@@ -39,6 +40,11 @@ export default class LoginScreen extends React.Component {
     }
     onPress = () => {
       if (this.state.email === 'test@demo.com' && this.state.password === '123') {
+        Animated.timing(
+          this.animatedValue,
+          {
+            toValue:50,
+            duration:1000,}).start();
         this.props.navigation.navigate('Home');
       } else {
         Alert.alert(

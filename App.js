@@ -40,27 +40,27 @@ class App extends React.Component {
       name='Arnav Anand' 
       category='Exercice' 
       caption="Don't let the smile fool you! Took 30 minutes to click the right pic!"
-      src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>   */}
+      src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>   
   </View>
     </ScrollView>
   );
   }
 }
 
-class Login extends React.Component{
-  render()
-  {
-    return(
-      <LoginScreen />
-    );
-  }
-}
+// class Login extends React.Component{
+//   render()
+//   {
+//     return(
+//       <LoginScreen />
+//     );
+//   }
+// }
 
 const MainNavigator = createStackNavigator(
   {
     Home: { screen: App },
     // Feed: { screen: FeedScreen },
-    Login:{screen:Login}
+    Login:{screen:LoginScreen}
   },
   {
     initialRouteName: 'Login'

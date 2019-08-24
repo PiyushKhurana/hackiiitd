@@ -25,17 +25,23 @@ class App extends React.Component {
       name='Ana Srivas' 
       category='Diet' 
       caption='Who said salads are not appetising??'
-      src='https://www.tasteofhome.com/wp-content/uploads/2017/10/exps6498_MRR133247D07_30_5b_WEB-2.jpg'/>  
+      src='https://www.tasteofhome.com/wp-content/uploads/2017/10/exps6498_MRR133247D07_30_5b_WEB-2.jpg'
+      cal='152 calories'
+      />  
     <CardFeed 
       name='Anushka Sharma' 
       category='Exercise' 
       caption='Planking is just for me:Practical And Simple!!'
-      src='https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20pakkawit%20anantaya,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1535469198/trhm9s3q58xgibwhfde3.jpg'/>  
+      src='https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20pakkawit%20anantaya,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1535469198/trhm9s3q58xgibwhfde3.jpg'
+      
+      />  
     <CardFeed 
       name='Ana Srivas' 
       category='Diet' 
       caption='I never undermine the importance of cheat days!!'
-      src='http://static.samacharjagatlive.com/newscdn/resources/uploads/ALL-NEWS/17012018/1516180131.jpg'/>  
+      src='http://static.samacharjagatlive.com/newscdn/resources/uploads/ALL-NEWS/17012018/1516180131.jpg'
+      cal='152 calories'
+      />  
     <CardFeed 
       name='Arnav Anand' 
       category='Exercice' 

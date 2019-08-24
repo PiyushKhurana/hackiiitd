@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableHighlight,Image,Animated, } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight,Image,Animated,Alert } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
     container: {
@@ -43,7 +44,15 @@ class CardFeed extends React.Component {
             text:'Like',
         };
     }
-    
+    calories = ()=>{
+        if(this.props.category==="Diet")
+        {
+            Alert.alert(
+                this.props.cal
+              );
+        }
+    }
+
     iLike=()=>
     {
         if(this.state.count===0)
@@ -82,7 +91,9 @@ class CardFeed extends React.Component {
         </View>
         <Text style={styles.title}>{this.props.caption}</Text>
         <View style={styles.photoCont}>
+        <TouchableOpacity onLongPress={this.calories}>
         <Image style={[{width: 300, height: 300}]} source={{ uri:this.props.src}} />
+        </TouchableOpacity>	
         </View>
         <TouchableHighlight onPress={this.iLike}>
         <Animated.Text style={[{color:bgColor},styles.likeButton]}>{this.state.text}</Animated.Text>

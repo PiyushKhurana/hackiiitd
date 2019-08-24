@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button,Image,Alert, } from 'react-native';
+import { StyleSheet, Text, View, Button,Image,ActivityIndicator, } from 'react-native';
 import De from './de.js';
 const styles = StyleSheet.create({
     container: {
@@ -37,6 +37,11 @@ const styles = StyleSheet.create({
       color:'#fffacd',
       // padding:10,
     },
+    follow:{
+      textDecorationStyle:"double",
+      textDecorationLine:"underline",
+      fontSize:17,
+    },
   });
 
 class Profile extends React.Component {
@@ -49,9 +54,15 @@ class Profile extends React.Component {
             Age:19,
             Height:165,
             Weight:60,
+            Diet:'',
+            ai:false,
         };
     }
-    
+    onPress=()=>{
+    this.setState({ ai: true });
+     setTimeout(() => this.setState({ ai: false }), 2000);
+     this.setState({Diet:'Ketogenic!'});
+    }
     render()
     {
   return (
@@ -70,7 +81,7 @@ class Profile extends React.Component {
       </View>
     </View>
     <View>
-      <Text>Diets Followed</Text>
+      <Text style={styles.follow}>Diets Followed</Text>
       <View style={styles.forDe}>
         <De name='Keto'/>
         <De name='Paleo'/>
@@ -78,7 +89,7 @@ class Profile extends React.Component {
       </View>
     </View>
     <View>
-      <Text>Exercises Followed</Text>
+      <Text style={styles.follow}>Exercises Followed</Text>
       <View style={styles.forDe}>
         <De name='Running'/>
         <De name='Swimming'/>
@@ -86,8 +97,14 @@ class Profile extends React.Component {
       </View>
     </View>
     <View style={styles.trainer}>
-      <Text style={{textAlign:'center',fontWeight:'300'}}>Trainer H</Text>
-      <Button title='Recommend Diet To Me!!' style={styles.button} />
+      <Text style={{textAlign:'center',fontWeight:'300' ,fontSize:20}}>Trainer H</Text>
+      <Button 
+        title='Recommend Diet To Me!!' 
+        style={styles.button} 
+        onPress={this.onPress}
+        disabled={this.state.ai} />
+      <ActivityIndicator size="small" color="#00ff00" animating={this.state.ai}/>
+      <Text>{this.state.Diet}</Text>
     </View>
     </View>
   );

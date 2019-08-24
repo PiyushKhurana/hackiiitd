@@ -38,14 +38,14 @@ class App extends React.Component {
     <CardFeed 
       name='Ana Srivas' 
       category='Diet' 
-      caption='I never undermine the importance of cheat days!!'
-      src='http://static.samacharjagatlive.com/newscdn/resources/uploads/ALL-NEWS/17012018/1516180131.jpg'
-      cal='152 calories'
+      caption='I never miss cheat days!!'
+      src='https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2015/07/halloumi-burger.jpg'
+      cal='295 calories'
       />  
     <CardFeed 
       name='Arnav Anand' 
       category='Exercice' 
-      caption="Don't let the smile fool you! Took 30 minutes to click the right pic!"
+      caption="Clap along if you are happy!"
       src='https://strongains.com/wp-content/uploads/2014/05/Copy-of-dumbbell-lunges.jpg'/>   
   </View>
     </ScrollView>

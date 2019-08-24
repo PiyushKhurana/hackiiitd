@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:100,
         textAlign: 'center',
+        textDecorationLine:"underline",
+
       },
 })
 
@@ -44,7 +46,7 @@ export default class LoginScreen extends React.Component {
           this.animatedValue,
           {
             toValue:50,
-            duration:1000,}).start();
+            duration:0,}).start();
         this.props.navigation.navigate('Home');
       } else {
         Alert.alert(

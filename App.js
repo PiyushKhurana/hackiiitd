@@ -4,10 +4,7 @@ import CardFeed  from './CardFeed/cardfeed';
 import Profile from './Profile/profile';
 import { createAppContainer,createStackNavigator} from 'react-navigation';
 
-
 import LoginScreen from './Login/login';
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -50,12 +47,20 @@ class App extends React.Component {
   }
 }
 
+class Login extends React.Component{
+  render()
+  {
+    return(
+      <LoginScreen />
+    );
+  }
+}
 
 const MainNavigator = createStackNavigator(
   {
     Home: { screen: App },
-    Feed: { screen: CardFeed },
-    Login:{screen:LoginScreen}
+    // Feed: { screen: FeedScreen },
+    Login:{screen:Login}
   },
   {
     initialRouteName: 'Login'

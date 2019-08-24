@@ -11,8 +11,22 @@ const styles = StyleSheet.create({
         borderColor: '#191970',
         borderRadius: 14,
         margin: 20,
-        textAlign: 'center'
-      }
+        textAlign: 'center',
+        color:'#fffff0',
+        fontWeight:"bold",
+        fontSize:20,
+      },
+      hm:{
+        fontWeight:"bold",
+        fontSize:60,
+        color:'#fffff0',
+      },
+      yc:{
+        color:'#f5fffa',
+        fontWeight:"bold",
+        fontSize:100,
+        textAlign: 'center',
+      },
 })
 
 export default class LoginScreen extends React.Component {
@@ -48,14 +62,14 @@ export default class LoginScreen extends React.Component {
               'https://previews.123rf.com/images/karandaev/karandaev1412/karandaev141200111/34366272-dumbells-tape-measure-and-healthy-food-over-wooden-background-fitness-and-health-view-from-above.jpg'
           }}
           style={{
-            width: '100%',
-            height: '100%',
+            width:'100%',
+            height: "100%",
             flex: 1,
             alignItems: 'center',
-            justifyContent: 'center'
+            // justifyContent: 'center'
           }}
         >
-          <Text>Details Screen</Text>
+          <Text style={styles.hm}>Health Mate</Text>
           <TextInput
             style={styles.input}
             placeholder="EmailID"
@@ -72,6 +86,7 @@ export default class LoginScreen extends React.Component {
             onChangeText={this.onChangePassword}
           />
           <Button title="LOGIN" onPress={this.onPress} />
+          <Text style={styles.yc}>You Can!!</Text>
         </ImageBackground>
       );
     }
